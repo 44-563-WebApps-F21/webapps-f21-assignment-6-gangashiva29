@@ -7,6 +7,22 @@
 <h2>
     Pass Phrase by Ganga Shiva Kumar
 </h2>
+
+<style>
+    h2 {
+        background-color: bisque;
+    }
+
+    label {
+        color: darkgoldenrod;
+    }
+
+    p {
+        color: darkred;
+    }
+</style>
+
+
 <br>
 
 <form>
@@ -26,6 +42,8 @@
 <script> 
     var correct = 0;
     var wrong = 0;
+    var countP = 0;
+    var countN = 0;
     var usingImage = 1;
     function processPhrase(){
         a = document.getElementById("phrase").value
@@ -33,17 +51,27 @@
         c = document.getElementById("result")
         if(a == b){
             correct+=1;
+            countN=0;
             alert("Access allowed");
             c.innerHTML = "RIGHT - "+correct;
         }
         else{
+            countN++;
             wrong+=1;
             alert("Access denied");
             c.innerHTML ="WRONG - "+ wrong;
-            
+            if(countN >=3){
+                if(wrong>=3){
+                    incorrectPassPhrase();
+                }
+            }
         }
     }
     
+    function incorrectPassPhrase() {
+        alert("Account Locked");
+    }
+
     function newImage() {
         switch (usingImage) {
             case 1:
