@@ -1,4 +1,8 @@
 # WebApps-F21-Assignment-6
 Assignment introduction Java Script and DOM
 
- [hosted at](https://44-563-webapps-f21.github.io/webapps-f21-assignment-6-gangashiva29/pass.html)
+ [hosted at Pass page](https://44-563-webapps-f21.github.io/webapps-f21-assignment-6-gangashiva29/pass.html)
+ 
+ [hosted at arithmetic Page](https://44-563-webapps-f21.github.io/webapps-f21-assignment-6-gangashiva29/arithmetic.html)
+ 
+ [hosted at Car page](https://44-563-webapps-f21.github.io/webapps-f21-assignment-6-gangashiva29/car.html)
