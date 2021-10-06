@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+<title>Pass Page</title>
+
+<h2>
+    Pass Phrase by Ganga Shiva Kumar
+</h2>
+<br>
+
+<form>
+    <label for="secret_phrase">Enter the secret phrase</label>
+    <input type="password" id="phrase" value="let me in">
+    <br>
+    <br>
+    <label for="phrase_name">Enter a phrase</label>
+    <input type="text" id="phrase_text">
+    <br>
+    <br>
+</form>
+    
+    <button class="btn btn-success" onclick="processPhrase()">Check the Phrase</button>
+    <p id="result"></p>
+
+<script> 
+    var correct = 0;
+    var wrong = 0;
+    var usingImage = 1;
+    function processPhrase(){
+        a = document.getElementById("phrase").value
+        b = document.getElementById("phrase_text").value
+        c = document.getElementById("result")
+        if(a == b){
+            correct+=1;
+            alert("Access allowed");
+            c.innerHTML = "RIGHT - "+correct;
+        }
+        else{
+            wrong+=1;
+            alert("Access denied");
+            c.innerHTML ="WRONG - "+ wrong;
+            
+        }
+    }
+    
+    function newImage() {
+        switch (usingImage) {
+            case 1:
+            document.getElementById("image1").src = "african-civet.jpg";
+            usingImage+=1;
+            break;
+            case 2:
+            document.getElementById("image1").src = "Galapagos-tortoise.jpg";
+            usingImage+=1;
+            break;
+            case 3:
+            document.getElementById("Image1").src = "afghan-hound.jpg";
+            usingImage+=1;
+            break;
+            default: 
+            document.getElementById("image1").src = "afghan-hound.jpg";
+            usingImage+=1;
+            break;
+        }
+    }
+</script>
+<div class="container">
+<img src="afghan-hound.jpg" onclick="newImage()" id="image1" alt="afghan-hound" style="width: 200px;height: 200px;">
+</div>
+
+    
+</body>
+</html>
